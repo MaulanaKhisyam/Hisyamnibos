@@ -1,5 +1,3 @@
-package com.example.tugasss
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +13,10 @@ import retrofit2.Response
 import com.example.tugasss.network.Character
 import com.google.android.material.snackbar.Snackbar
 import com.bumptech.glide.Glide
+import com.example.tugasss.MainAdapter
+import com.example.tugasss.MainViewModel
+import com.example.tugasss.R
+import com.example.tugasss.ScreenState
 
 
 class MainActivity : AppCompatActivity() {
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                         StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                     recyclerView?.adapter = adapter
 
-                    
+
                 }
             }
             is ScreenState.Error -> {
